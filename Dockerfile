@@ -84,8 +84,7 @@ RUN mkdir -p /opt/AWS-CLI \
   && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"  -o "/opt/awscliv2.zip" \
   && unzip /opt/awscliv2.zip -d /opt/AWS-CLI/ \
   && sudo /opt/AWS-CLI/aws/install \
-  && rm /opt/awscliv2.zip
-  && aws emr create-default-roles
+  && rm /opt/awscliv2.zip 
 
 EXPOSE 8080 5555 8793
 

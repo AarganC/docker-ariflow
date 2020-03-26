@@ -30,7 +30,7 @@ then
 fi
 if aws s3 ls "s3://{{ params.bucket_pyton }}" | grep -q 'sparky.py'
 then
-    aws s3 cp ../python/sparky.py s3://{{ params.bucket_pyton }}/
+    aws s3 cp /usr/local/airflow/python/sparky.py s3://{{ params.bucket_pyton }}/
 fi
 """
 cmd = BashOperator(task_id='aws_configure',
