@@ -9,7 +9,7 @@ from datetime import timedelta
 default_args = {'owner': 'airflow', 'depends_past': False, 'start_date': dt(2020, 3, 23),
                 'retries': 0, 'sla': timedelta(hours=1)}
 
-dag = DAG('variable_example', default_args=default_args, schedule_interval='30 07 * * *')
+dag = DAG('params_example', default_args=default_args, schedule_interval='30 07 * * *')
 
 
 cmd = """
