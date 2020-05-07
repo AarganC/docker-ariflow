@@ -20,7 +20,7 @@ unzip /tmp/awscli.zip -d {} \
 sudo {}aws/install \
 rm /tmp/awscli.zip \
 aws emr create-default-roles
-""".format(directory_dest, directory_dest, directory_dest, url_awscli)
+""".format(directory_dest, url_awscli, directory_dest, directory_dest)
 
 install_aws = SSHOperator(
     ssh_conn_id='adaltas_ssh',
